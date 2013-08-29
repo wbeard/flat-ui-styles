@@ -25,11 +25,21 @@
 	inline-block()
 	relative()
 	min-width 500px
-	min-height 300px
 	border-radius(1px)
 	box-shadow(0 0 5px midnight_blue)
 	& > div
 		box-sizing: border-box
+	&.drop
+		animation(drop 0.5s)
+	&.drop-up
+		animation(drop-up 0.5s)
+	&.slide-from-left
+		animation(slide-from-left 0.5s)
+	&.slide-from-right
+		animation(slide-from-right 0.5s)
+	&.pop-up
+		animation(pop-up 0.5s)
+		
 	
 .modal-header
 	height 50px
@@ -38,23 +48,66 @@
 	text-align center
 	color midnight_blue
 	border-bottom 5px midnight_blue solid
+	position relative
 	& h3
 		font-size 24px
-		line-height 30px
+		line-height 36px
 		font-weight bold
 		margin 0
+	& .close
+		close()
 	
 .modal-body
+	min-height 200px
 	padding 5px
 	width 100%
 	color black
-	text-align center
+	text-align left
 
 .modal-footer
 	height 50px
 	width 100%
-	absolute(bottom, left)
 	padding 5px
+	
+@keyframes drop
+	0%
+		top -300px
+		opacity 0
+	100%
+		top 0px
+		opacity 1
+		
+@keyframes drop-up
+	0%
+		top 300px
+		opacity 0
+	100%
+		top 0px
+		opacity 1
+		
+@keyframes slide-from-left
+	0%
+		right 300px
+		opacity 0
+	100%
+		right 0px
+		opacity 1
+		
+@keyframes slide-from-right
+	0%
+		left 300px
+		opacity 0
+	100%
+		left 0px
+		opacity 1
+		
+@keyframes pop-up
+	0%
+		transform(scale(0.5))
+		opacity 0
+	100%
+		transform(scale(1))
+		opacity 1
 	
 
 	
