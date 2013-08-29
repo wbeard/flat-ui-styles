@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<link href="components/modal.css" rel="stylesheet" />
+<link href="components/buttons.css" rel="stylesheet" />
+</head>
+<body>
+
+<a id="launchModal" href="#" class="button-warning button-medium">Launch Modal!</a>
+<select id="transition">
+	<option>
+		drop
+	</option>
+	<option>
+		drop-up
+	</option>
+	<option>
+		slide-from-left
+	</option>
+	<option>
+		slide-from-right
+	</option>
+	<option>
+		pop-up
+	</option>
+</select>
+
+<script src="js/dojoConfig.js" data-dojo-config="async: true"></script>
+<!-- Grab Google CDN's dojo ============================================================= -->
+<script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
+<script>
+	require(["dojo/dom", "dojo/on", "dojo/dom-attr", "c8/modal"], function(dom, on, domAttr, Modal) {
+		on(dom.byId("launchModal"), "click", function(evt) {
+			console.log(Modal);
+			new Modal({
+				type: domAttr.get("transition", "value"),
+				header: "Hi there!",
+				body: "Howdy!",
+				button: "Ok!"
+			}).fire();
+		});
+	});
+</script>
+</body>
+</html>
