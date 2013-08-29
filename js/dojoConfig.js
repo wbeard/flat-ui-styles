@@ -7,7 +7,7 @@ dojoConfig = {
     packages: [
         {
             name: "c8",
-            location: "/flatuicolors/js/friendly/amd"
+            location: "js/friendly/amd"
         }
 	]
 }
