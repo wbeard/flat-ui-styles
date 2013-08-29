@@ -116,6 +116,7 @@
   background-image: -ms-linear-gradient(top, #40d47f 0, #2cc66d 100%);
   background-image: -o-linear-gradient(top, #40d47f 0, #2cc66d 100%);
   background-image: linear-gradient(top, #40d47f 0, #2cc66d 100%);
+  color: #fff;
 }
 .button-primary {
   color: #fff;
@@ -133,7 +134,11 @@
   background-image: -ms-linear-gradient(top, #48a2df 0, #2e90d0 100%);
   background-image: -o-linear-gradient(top, #48a2df 0, #2e90d0 100%);
   background-image: linear-gradient(top, #48a2df 0, #2e90d0 100%);
+  color: #fff;
 }
 .button-primary.flat {
   background: #2980b9;
+}
+.button-primary.flat:hover {
+  background: #3498db;
 }
