@@ -4,7 +4,10 @@ vendor(prop, args)
 	    -ms-{prop} args
 	     -o-{prop} args
 	        {prop} args
- 
+			
+no-decoration()
+	text-decoration none
+	
 border-radius()
 	vendor('border-radius', arguments)
  
@@ -32,3 +35,8 @@ background-linear-gradient(startPoint, startColor, startInterval, endColor, endI
 	background-image -ms-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
 	background-image -o-linear-gradient(startPoint, startColor startInterval, endColor endInterval)
 	background-image linear-gradient(startPoint, startColor startInterval, endColor endInterval)
+	
+inline-block()
+	display inline-block
+	*display inline
+	zoom 1
