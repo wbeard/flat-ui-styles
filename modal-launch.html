@@ -5,8 +5,6 @@
 <link href="components/buttons.css" rel="stylesheet" />
 </head>
 <body>
-
-<a id="launchModal" href="#" class="button-warning button-medium">Launch Modal!</a>
 <select id="transition">
 	<option>
 		drop
@@ -23,20 +21,29 @@
 	<option>
 		pop-up
 	</option>
+	<option>
+		drop-bounce
+	</option>
 </select>
+<br /><br />
+<a data-modal-type="warning" href="#" class="button-warning button-medium">Launch Modal!</a>
+<a data-modal-type="success" href="#" class="button-success button-medium">Launch Modal!</a>
+<a data-modal-type="primary" href="#" class="button-primary button-medium">Launch Modal!</a>
+<a data-modal-type="" href="#" class="button button-medium">Launch Modal!</a>
 
 <script src="js/dojoConfig.js" data-dojo-config="async: true"></script>
 <!-- Grab Google CDN's dojo ============================================================= -->
 <script src="//ajax.googleapis.com/ajax/libs/dojo/1.9.1/dojo/dojo.js"></script>
 <script>
-	require(["dojo/dom", "dojo/on", "dojo/dom-attr", "c8/modal"], function(dom, on, domAttr, Modal) {
-		on(dom.byId("launchModal"), "click", function(evt) {
-			console.log(Modal);
+	require(["dojo/dom", "dojo/on", "dojo/dom-attr", "dojo/query", "c8/modal"], function(dom, on, domAttr, query, Modal) {
+		on(query("[data-modal-type]"), "click", function(evt) {
 			new Modal({
-				type: domAttr.get("transition", "value"),
+				type: domAttr.get(evt.target, "data-modal-type"),
+				transition: domAttr.get("transition", "value"),
 				header: "Hi there!",
 				body: "Howdy!",
-				button: "Ok!"
+				button: "Ok!",
+				buttonType: domAttr.get(evt.target, "data-modal-type")
 			}).fire();
 		});
 	});

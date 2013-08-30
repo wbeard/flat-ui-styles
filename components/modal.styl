@@ -39,6 +39,8 @@
 		animation(slide-from-right 0.5s)
 	&.pop-up
 		animation(pop-up 0.5s)
+	&.drop-bounce
+		animation(drop-bounce 0.5s)
 		
 	
 .modal-header
@@ -47,7 +49,13 @@
 	padding 5px
 	text-align center
 	color midnight_blue
-	border-bottom 5px midnight_blue solid
+	border-bottom 2px midnight_blue solid
+	&.success
+		border-bottom-color success
+	&.warning
+		border-bottom-color warning
+	&.primary
+		border-bottom-color primary
 	position relative
 	& h3
 		font-size 24px
@@ -73,6 +81,19 @@
 	0%
 		top -300px
 		opacity 0
+	100%
+		top 0px
+		opacity 1
+
+@keyframes drop-bounce
+	0%
+		top -300px
+		opacity 0
+	70%
+		top 20px
+		opacity 1
+	85%
+		top 10px
 	100%
 		top 0px
 		opacity 1

@@ -78,14 +78,30 @@
   -o-animation: pop-up 0.5s;
   animation: pop-up 0.5s;
 }
+.modal.drop-bounce {
+  -webkit-animation: drop-bounce 0.5s;
+  -moz-animation: drop-bounce 0.5s;
+  -ms-animation: drop-bounce 0.5s;
+  -o-animation: drop-bounce 0.5s;
+  animation: drop-bounce 0.5s;
+}
 .modal-header {
   height: 50px;
   width: 100%;
   padding: 5px;
   text-align: center;
   color: #2c3e50;
-  border-bottom: 5px #2c3e50 solid;
+  border-bottom: 2px #2c3e50 solid;
   position: relative;
+}
+.modal-header.success {
+  border-bottom-color: #27ae60;
+}
+.modal-header.warning {
+  border-bottom-color: #e74c3c;
+}
+.modal-header.primary {
+  border-bottom-color: #2980b9;
 }
 .modal-header h3 {
   font-size: 24px;
@@ -167,6 +183,106 @@
   0% {
     top: -300px;
     opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes drop-bounce {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+
+  70% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  85% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes drop-bounce {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+
+  70% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  85% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-o-keyframes drop-bounce {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+
+  70% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  85% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@-ms-keyframes drop-bounce {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+
+  70% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  85% {
+    top: 10px;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+@keyframes drop-bounce {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+
+  70% {
+    top: 20px;
+    opacity: 1;
+  }
+
+  85% {
+    top: 10px;
   }
 
   100% {

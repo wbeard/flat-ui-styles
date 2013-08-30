@@ -19,6 +19,8 @@
             body: "Things are looking good",
             button: "Alright, great!",
             cancelButton: false,
+            buttonType: "continue",
+            transition: "pop-up",
 
             constructor: function (options) {
 

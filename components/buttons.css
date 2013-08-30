@@ -3,6 +3,7 @@
 .button-medium,
 .button-small,
 .button-link,
+.button-success,
 .button-continue,
 .button-primary,
 .button-warning {
@@ -37,6 +38,7 @@
 .button-medium:hover,
 .button-small:hover,
 .button-link:hover,
+.button-success:hover,
 .button-continue:hover,
 .button-primary:hover,
 .button-warning:hover {
@@ -52,6 +54,7 @@
 .button-medium.flat,
 .button-small.flat,
 .button-link.flat,
+.button-success.flat,
 .button-continue.flat,
 .button-primary.flat,
 .button-warning.flat {
@@ -67,6 +70,7 @@
 .button-medium.flat:hover,
 .button-small.flat:hover,
 .button-link.flat:hover,
+.button-success.flat:hover,
 .button-continue.flat:hover,
 .button-primary.flat:hover,
 .button-warning.flat:hover {
@@ -116,6 +120,7 @@
 .button-link.flat:hover {
   background: transparent;
 }
+.button-success,
 .button-continue {
   background-color: #2ecc71;
   background-image: -webkit-linear-gradient(top, #2ecc71 0, #27ae60 100%);
@@ -125,6 +130,7 @@
   background-image: linear-gradient(top, #2ecc71 0, #27ae60 100%);
   color: #fff;
 }
+.button-success.flat,
 .button-continue.flat {
   background: #27ae60;
   -webkit-box-shadow: none;
@@ -133,9 +139,11 @@
   -o-box-shadow: none;
   box-shadow: none;
 }
+.button-success.flat:hover,
 .button-continue.flat:hover {
   background: #2ecc71;
 }
+.button-success:hover,
 .button-continue:hover {
   background-color: #40d47f;
   background-image: -webkit-linear-gradient(top, #40d47f 0, #2cc66d 100%);
