@@ -1,6 +1,6 @@
 <div id="${_id}" class="modal-window">
-		<div class="modal ${type}">
-			<div class="modal-header">
+		<div class="modal ${transition}">
+			<div class="modal-header ${type}">
 				<h3>${header}</h3>
 				<i data-function="close" class="close"></i>
 			</div>
@@ -8,7 +8,7 @@
 				<p>${body}</p>
 			</div>
 			<div class="modal-footer">
-				<a href="#" data-function="close" class="button-warning button-medium flat">${button}</a>
+				<a href="#" data-function="close" class="button-${buttonType} button-medium flat">${button}</a>
 			</div>
 		</div>
 	</div>

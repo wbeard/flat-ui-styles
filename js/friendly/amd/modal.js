@@ -51,7 +51,7 @@
                 //esc to close
                 on.once(this.domElem, "keydown", lang.hitch(this, function (evt) {
                     var charC = (evt.which) ? evt.which : evt.keyCode;
-
+                    console.log(charC);
                     if (charC === 27) {
                         this.close();
                     }
