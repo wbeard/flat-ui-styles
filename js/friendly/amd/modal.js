@@ -1,6 +1,6 @@
 ﻿define(["dojo/_base/declare",
         "dojo/_base/lang",
-        "c8/uid",
+        "./uid",
         "dojo/query",
         "dojo/dom",
         "dojo/dom-construct",

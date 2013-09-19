@@ -1,7 +1,7 @@
 // Dojo configuration
 // dojoConfig global must be declared before grabbing dojo.js
 dojoConfig = {
-    baseUrl: "",
+    baseUrl: "/fiat/",
     parseOnLoad: false,
     isDebug: false,
     packages: [
